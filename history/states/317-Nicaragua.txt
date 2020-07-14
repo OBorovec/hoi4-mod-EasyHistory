@@ -1,0 +1,35 @@
+state={
+	id=317
+	name="STATE_317"
+	resources={
+		chromium=1 # was: 1
+	}
+
+	state_category = town
+
+	history={
+		owner = NICs
+		buildings = {
+			infrastructure = 0
+			arms_factory = 0
+			industrial_complex = 0
+			air_base = 0
+			12738 = {
+				naval_base = 0
+
+			}
+
+		}
+		add_core_of = NICs
+		victory_points = {
+			12738 3
+		}
+
+	}
+
+	provinces={
+		1988 2075 10728 12738 13139 13178 
+	}
+	manpower=683000
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,37 @@
+
+state={
+	id=300
+	name="STATE_300"
+	manpower = 1734000
+	
+	state_category = large_city
+	
+	resources={
+		oil=1 # was: 2
+		steel=1 # was: 2
+	}
+	history={
+		owner = URGs
+		buildings = {
+			infrastructure = 0
+			arms_factory = 0
+			industrial_complex = 0
+			dockyard = 0
+			air_base = 0
+			10362 = {
+				naval_base = 0
+				bunker = 0
+				coastal_bunker = 0
+			}
+		}
+		add_core_of = URGs
+		victory_points = {
+			10362 5
+		}
+
+	}
+
+	provinces={
+		1613 1626 1641 1654 4457 10347 10362 10502 12336 12440 12468 12481 12496 
+	}
+}
