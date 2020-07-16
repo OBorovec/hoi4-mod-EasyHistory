@@ -1,6 +1,124 @@
 ideas = {
 
 	country = {
+
+        ENG_spirit_private_constructions = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+			}
+
+			picture = generic_goods_red_bonus
+			
+			removal_cost = -1	
+
+		}
+
+		ENG_spirit_privatisation = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+
+			removal_cost = -1
+		}
+
+		ENG_colonial_elite_10 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		ENG_slow_rearmament = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		ENG_war_preparations = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		ENG_supportive_private_industry = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		# Original
+
 		george_v = {
 			
 			allowed = {
@@ -25,7 +143,6 @@ ideas = {
 			removal_cost = -1
 			
 			traits = { popular_figurehead }
-			
 
 		}
 
@@ -1749,7 +1866,6 @@ ideas = {
 		}
 
 	}
-	
 	
 	political_advisor = {
 		
