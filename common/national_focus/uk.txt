@@ -24,7 +24,7 @@ focus_tree = {
     focus = {
 		id = UK_focus_on_recovery
 
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_goal_generic_consumer_goods
 		x = 1
 		y = 0
 		cost = 1
@@ -38,7 +38,7 @@ focus_tree = {
 		id = UK_private_contructions
 		prerequisite = { focus = UK_focus_on_recovery }
 
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_mex_privatisation
 		x = -1
 		y = 1
 		relative_position_id = UK_focus_on_recovery
@@ -54,7 +54,7 @@ focus_tree = {
 		id = UK_privatisation
 		prerequisite = { focus = UK_private_contructions }
 
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_generic_industry_2
 		x = 0
 		y = 1
 		relative_position_id = UK_private_contructions
@@ -70,7 +70,7 @@ focus_tree = {
 		id = UK_state_support
 		prerequisite = { focus = UK_focus_on_recovery }
 
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_goal_generic_production
 		x = 1
 		y = 1
 		relative_position_id = UK_focus_on_recovery
@@ -117,7 +117,7 @@ focus_tree = {
 		prerequisite = { focus = UK_public_investment }
 		prerequisite = { focus = UK_privatisation }
 
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = 1
 		y = 1
 		relative_position_id = UK_privatisation
