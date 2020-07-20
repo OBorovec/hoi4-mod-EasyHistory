@@ -529,14 +529,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = UK_economic_decisions
+		id = UK_rearmament_decision
 		prerequisite = { focus = limited_rearmament_focus }
 		
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 3
 		y = 1
 		relative_position_id = limited_rearmament_focus
-		cost = 10
+		cost = 1
 			
 		completion_reward = {
 		}
@@ -544,52 +544,61 @@ focus_tree = {
 
 	focus = {
 		id = UK_decision_prod
-		prerequisite = { focus = UK_economic_decisions }
+		prerequisite = { focus = UK_rearmament_decision }
 		mutually_exclusive = { focus = UK_decision_const }
 		mutually_exclusive = { focus = UK_decision_res }
 
 		icon = GFX_goal_generic_construct_civilian
 		x = -2
 		y = 1
-		relative_position_id = UK_economic_decisions
+		relative_position_id = UK_rearmament_decision
 		cost = 5
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_decision_line_equipment_prod
+			}
 		}
 	}
 
 	focus = {
 		id = UK_decision_const
-		prerequisite = { focus = UK_economic_decisions }
+		prerequisite = { focus = UK_rearmament_decision }
 		mutually_exclusive = { focus = UK_decision_prod }
 		mutually_exclusive = { focus = UK_decision_res }
 
 		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 1
-		relative_position_id = UK_economic_decisions
+		relative_position_id = UK_rearmament_decision
 		cost = 5
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_spirit_reduced_inflation
+			}
 		}
 	}
 
 	focus = {
 		id = UK_decision_res
-		prerequisite = { focus = UK_economic_decisions }
+		prerequisite = { focus = UK_rearmament_decision }
 		mutually_exclusive = { focus = UK_decision_prod }
 		mutually_exclusive = { focus = UK_decision_const }
 
 		icon = GFX_goal_generic_construct_civilian
 		x = 2
 		y = 1
-		relative_position_id = UK_economic_decisions
+		relative_position_id = UK_rearmament_decision
 		cost = 5
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_research_grant_1
+			}
 		}
 	}
 
@@ -607,6 +616,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_decision_air_prod
+			}
 		}
 	}
 
@@ -624,6 +636,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_spirit_subsidized_construstion
+			}
 		}
 	}
 
@@ -641,6 +656,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_research_grant_2
+			}
 		}
 	}
 
@@ -658,6 +676,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_decision_tank_prod
+			}
 		}
 	}
 
@@ -675,6 +696,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_spirit_factory_output
+			}
 		}
 	}
 
@@ -692,6 +716,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_research_grant_3
+			}
 		}
 	}
 	focus = {
@@ -708,6 +735,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_decision_ship_prod
+			}
 		}
 	}
 
@@ -725,6 +755,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_spirit_factory_retention
+			}
 		}
 	}
 
@@ -742,6 +775,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			add_ideas = {
+				ENG_research_grant_4
+			}
 		}
 	}
 
@@ -1461,6 +1497,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = uk_rock_focus 
 		prerequisite = { focus = uk_mediterranean_focus }
@@ -1500,6 +1537,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = uk_spain_focus
 		prerequisite = { focus = uk_mediterranean_focus }
@@ -1776,6 +1814,7 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			army_experience = 25
 		}
 	}
 
@@ -1790,6 +1829,9 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
+			add_ideas = {
+				ENG_state_mil_factories
+			}
 		}
 	}
 
@@ -1804,11 +1846,14 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
+			add_ideas = {
+				ENG_Spain_interventionism
+			}
 		}
 	}
 
 	focus = {
-		id = UK_non_land_res
+		id = UK_army_departments
 		prerequisite = { focus = UK_war_office }
 
 		icon = GFX_goal_generic_construct_civilian
@@ -1818,6 +1863,24 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = naval_doctrine
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
 		}
 	}
 
