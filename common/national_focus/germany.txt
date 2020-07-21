@@ -843,6 +843,9 @@ focus_tree = {
 				}
 				add_state_core = 153
 			}
+			ENG = {
+				country_event = { days = 1 id = germany.2005 }
+			}
 		}
 	}
 
@@ -1115,6 +1118,9 @@ focus_tree = {
 			}
 			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
 			custom_effect_tooltip = end_of_czechoslovakia_mefo_bills_tt
+			ENG = {
+				country_event = { days = 1 id = germany.2005 }
+			}
 		}
 	}
 
@@ -1436,6 +1442,10 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { hours = 6 id = news.234 }
 			}
+			
+			ENG = {
+				country_event = { days = 1 id = germany.2005 }
+			}
 		}
 	}
 
@@ -1592,6 +1602,7 @@ focus_tree = {
 				target = SWI
 				expire = 0
 			}
+			country_event = { id = germany.2004 }
 		}
 	}
 

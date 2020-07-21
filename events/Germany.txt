@@ -61,6 +61,100 @@ country_event = {
 	}
 }
 
+# Justify on Switzerland
+country_event = {
+	id = germany.2004
+	title = germany.2004.t
+	desc = {
+		text = germany.2004.d
+	}
+	picture = GFX_report_event_german_inspect_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.2004.a
+		
+		add_stability = -0.05
+	}
+}
+
+
+# British reacts to Anslush
+country_event = {
+	id = germany.2005
+	title = germany.2005.t
+	desc = {
+		text = germany.2005.d
+	}
+	
+	is_triggered_only = yes
+	
+#	option = {
+#		name = germany.2005.a
+#		
+#		add_stability = 0.1
+#	}
+	option = {
+		name = germany.2005.b
+		
+		swap_ideas = {
+			remove_idea = ENG_intention_peace_1
+			add_idea = ENG_intention_peace_2
+		}
+	}
+}
+
+# British reacts to occupation of CZ
+country_event = {
+	id = germany.2006
+	title = germany.2006.t
+	desc = {
+		text = germany.2006.d
+	}
+	
+	is_triggered_only = yes
+	
+#	option = {
+#		name = germany.2006.a
+#		
+#		add_stability = 0.1
+#	}
+	option = {
+		name = germany.2006.b
+		
+		swap_ideas = {
+			remove_idea = ENG_intention_peace_2
+			add_idea = ENG_intention_war_1
+		}
+	}
+}
+
+# British react to around Magino
+country_event = {
+	id = germany.2007
+	title = germany.2007.t
+	desc = {
+		text = germany.2007.d
+	}
+	
+	is_triggered_only = yes
+	
+#	option = {
+#		name = germany.2007.a
+#		
+#		add_stability = 0.1
+#	}
+	option = {
+		name = germany.2007.b
+		
+		swap_ideas = {
+			remove_idea = ENG_intention_war_1
+			add_idea = ENG_intention_war_2
+		}
+	}
+}
+
 ###################################################################
 # Original
 ###################################################################
@@ -1248,12 +1342,6 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_completed_focus = ENG_no_further_appeasement
-			}
-			add_political_power = -200
-		}
-		if = {
-			limit = {
 				tag = HOL
 			}
 			ENG = { country_event = germany.40 }
@@ -1301,6 +1389,7 @@ country_event = {
 					id = "CZE"
 					value = 100
 				}
+				add_stability = 0.1
 			}
 		}
 		if = {
@@ -1309,131 +1398,6 @@ country_event = {
 				is_faction_leader = yes
 			}
 			remove_from_faction = CZE
-		}
-	}
-	option = { # Support the Czechs
-		name = germany.40.b	
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				is_in_faction_with = GER
-			}
-			modifier = {
-				factor = 0
-				ENG_is_on_historical_plan_trigger = yes
-				NOT = { 
-					OR = { 
-						is_in_faction_with = CZE
-						has_war_with = GER
-					}
-				}
-			}				
-			modifier = {
-				factor = 3
-				has_government = communism
-				CZE = { has_government = communism }
-			}
-			modifier = {
-				factor = 0
-				AND = {
-					OR = {
-						has_game_rule = {
-							rule = ENG_ai_behavior 
-							option = NEUTRALITY
-						}
-						has_game_rule = {
-							rule = ENG_ai_behavior 
-							option = COMMUNIST
-						}
-					}
-					NOT = { 
-						OR = { 
-							is_in_faction_with = CZE
-							has_war_with = GER
-						}
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				is_in_faction_with = GER
-				is_faction_leader = yes
-			}
-			remove_from_faction = GER
-		}
-		if = {
-			limit = {
-				is_in_faction_with = GER
-				is_faction_leader = no
-			}
-			GER = { remove_from_faction = ENG }
-		}
-		if = {
-			limit = {
-				NOT = { has_completed_focus = ENG_no_further_appeasement }
-			}
-			add_political_power = -200
-		}
-		add_opinion_modifier = { target = GER modifier = condemn_aggression }
-		effect_tooltip = {
-			GER = {
-				create_wargoal = {
-					type = take_state_focus
-					target = CZE
-					generator = { 69 }
-				}
-			}
-		}
-		if = {
-			limit = { 
-				is_in_faction = yes
-				CZE = { is_in_faction = no } 
-			}
-			random_country = {
-				limit = {
-					is_faction_leader = yes
-					is_in_faction_with = ROOT #this may in fact be ROOT, since countries are in a faction with themselves!
-				}
-				add_to_faction = CZE
-			}
-		}
-		if = {
-			limit = {
-				tag = HOL
-			}
-			CZE = {
-				add_ai_strategy = {
-					type = alliance
-					id = "HOL"
-					value = 200
-				}
-			}
-		}
-		if = {
-			limit = {
-				tag = HOL
-			}
-			CZE = {
-				add_ai_strategy = {
-					type = alliance
-					id = "ENG"
-					value = 200
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = { tag = HOL }
-				FRA = { 
-					NOT = { has_war_with = CZE } 
-				} 
-			}
-			FRA = { country_event = germany.42 }
-		}
-		CZE = {
-			add_opinion_modifier = { target = ROOT modifier = offered_support }
 		}
 	}
 }
