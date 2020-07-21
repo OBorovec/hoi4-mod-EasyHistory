@@ -644,7 +644,7 @@ focus_tree = {
 
 	focus = {
 		id = UK_decision_res_2
-		prerequisite = { focus = UK_decision_prod focus = UK_decision_inf  focus = UK_decision_res }
+		prerequisite = { focus = UK_decision_prod focus = UK_decision_prod_2  focus = UK_decision_res }
 		mutually_exclusive = { focus = UK_decision_prod_2 }
 		mutually_exclusive = { focus = UK_decision_const_2 }
 

@@ -4551,7 +4551,7 @@ focus_tree = {
 					level = 5
 					instant_build = yes
 				}
-			}			
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -4563,6 +4563,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			country_event = { id = germany.2001 }
 		}
 	}
 
@@ -4588,12 +4589,13 @@ focus_tree = {
 			add_ideas = {
 				GER_public_transportation
 			}
+			country_event = { id = germany.2002 }
 		}
 	}
 
 	focus = {
-		id = GER_krupp_wagen
-		icon = GFX_goal_generic_construct_civ_factory
+		id = GER_hunting_as_sport
+		icon = GFX_goal_generic_construct_mil_factory
 		dynamic = yes
 		prerequisite = { focus = GER_ppl_transports }
 		available = {
@@ -4609,9 +4611,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			add_ideas = {
-						GER_hunting_as_sport = {
+				GER_hunting_as_sport
 
 			}
+			country_event = { id = germany.2003 }
 		}
 	}
 
